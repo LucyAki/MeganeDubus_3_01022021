@@ -45,7 +45,10 @@ body {
   text-decoration: none;
   color: white;
   font-size: 0.9rem;
-  box-shadow: 2px 4px 6px gray;
+  box-shadow: 2px 4px 6px #aaaaaa;
+}
+.btn:hover {
+  box-shadow: 2px 4px 2px #777777;
 }
 
 footer {
@@ -93,7 +96,7 @@ footer a {
 }
 
 .section-fonctionnement {
-  margin-left: 5%;
+  margin-left: 8%;
 }
 .section-fonctionnement__container-fiches div {
   display: flex;

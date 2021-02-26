@@ -33,5 +33,8 @@
     text-decoration: none;
     color: white;
     font-size: 0.9rem;
-    box-shadow: 2px 4px 6px gray;
+    box-shadow: 2px 4px 6px darken($color-bg, 30%);
+    &:hover{
+        box-shadow: 2px 4px 2px darken($color-bg, 50%);
+    }
 }
