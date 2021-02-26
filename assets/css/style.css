@@ -54,7 +54,6 @@ body {
 footer {
   background-color: #353535;
   padding: 2% 0 5% 5%;
-  margin-top: 2%;
 }
 footer h2 {
   font-family: "shrikhand";
@@ -141,7 +140,68 @@ footer a .icone-hand {
 }
 
 .section-restaurants {
-  display: none;
+  background-color: #F6F6F6;
+  margin-bottom: 0;
+  padding: 30px 0 30px 0;
+}
+.section-restaurants__container-fiches, .section-restaurants h2 {
+  margin-left: 8%;
+}
+.section-restaurants a {
+  text-decoration: none;
+  color: black;
+}
+.section-restaurants__new {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #278870;
+  height: 30px;
+  width: 80px;
+  border-radius: 7%/16%;
+  position: absolute;
+  right: 50px;
+  z-index: 1;
+}
+.section-restaurants__container-img {
+  justify-self: center;
+  margin: 0;
+  width: 300px;
+  height: 166px;
+  overflow: hidden;
+  border-radius: 5%/8%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.section-restaurants__container-img img {
+  width: 300px;
+  height: auto;
+  position: relative;
+}
+.section-restaurants__container-txt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 300px;
+  height: 70px;
+  margin-bottom: 30px;
+  border-radius: 5%/20%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.section-restaurants__container-txt div {
+  line-height: 6px;
+  margin-left: -22px;
+}
+.section-restaurants__container-txt i {
+  font-size: 1.5rem;
+}
+.section-restaurants__container-txt i:hover {
+  background: #f676da;
+  background: linear-gradient(360deg, #f676da 0%, #9356dc 100%);
 }
 
 /*# sourceMappingURL=style.css.map */

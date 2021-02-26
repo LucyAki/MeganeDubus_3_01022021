@@ -60,5 +60,55 @@
 }
 
 .section-restaurants{
-    display: none;
+    background-color: $color-bg;
+    margin-bottom: 0;
+    padding: 30px 0 30px 0;
+    &__container-fiches, h2{
+        margin-left: 8%;
+    }
+    & a{
+        text-decoration: none;
+        color: black;
+    }
+    &__new{
+        @include new;
+    }
+    &__container-img{
+        justify-self: center;
+        margin: 0;
+        width: 300px;
+        height: 166px;
+        overflow: hidden;
+        border-radius: 5% / 8%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        & img{
+            width: 300px;
+            height: auto;
+            position: relative;
+        }
+    }
+    &__container-txt{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        width: 300px;
+        height: 70px;
+        margin-bottom: 30px;
+        border-radius: 5% / 20%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        & div{
+            line-height: 6px;
+            margin-left: -22px;
+        }
+        & i{
+            font-size: 1.5rem;
+            &:hover{
+                background: rgb(246,118,218);
+                background: linear-gradient(360deg, rgba(246,118,218,1) 0%, rgba(147,86,220,1) 100%);
+            }
+        }
+    }
 }
