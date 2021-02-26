@@ -64,6 +64,12 @@ footer a {
   color: white;
   text-decoration: none;
 }
+footer a i {
+  margin-right: 10px;
+}
+footer a .icone-hand {
+  width: 0.8rem;
+}
 
 .head-accueil {
   display: flex;

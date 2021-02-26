@@ -21,6 +21,12 @@
     & a{
         color: white;
         text-decoration: none;
+        & i{
+            margin-right: 10px;
+        }
+        & .icone-hand{
+            width: .8rem;
+        }
     }
 }
 
