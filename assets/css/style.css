@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../sass/vendors/roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url("../sass/vendors/webfontkit-20210224-124557/shrikhand-regular-webfont.woff") format("woff"), url("../sass/vendors/webfontkit-20210224-124557/shrikhand-regular-webfont.woff2") format("woff2");
+}
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.head-menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+}
+.head-menus__logo {
+  width: 185px;
+  height: auto;
+}
+.head-menus__arrow {
+  width: 0;
+  padding-left: 5%;
+  z-index: 1;
+}
+.head-menus__arrow a {
+  color: black;
+}
+.head-menus__container-logo {
+  width: 100%;
+  margin-left: -5%;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background: #9356DC;
+  background: linear-gradient(352deg, #9356DC 0, #FF79DA 92%);
+  border-radius: 50%/192%;
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  box-shadow: 2px 4px 6px gray;
+}
+
+footer {
+  background-color: #353535;
+  padding: 2% 0 5% 5%;
+  margin-top: 2%;
+}
+footer h2 {
+  font-family: "shrikhand";
+  color: white;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.head-accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+}
+.head-accueil__logo {
+  width: 185px;
+  height: auto;
+}
+
+.section-intro {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.section-intro__location {
+  display: flex;
+  background-color: #eaeaea;
+  box-shadow: inset 0 5px 7px -5px #909090;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+}
+.section-intro__location i {
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.section-fonctionnement {
+  margin-left: 5%;
+}
+.section-fonctionnement__container-fiches div {
+  display: flex;
+  background-color: #F6F6F6;
+  border-radius: 6%/27%;
+  width: 90%;
+  height: 79px;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 8px #d0d0d0;
+}
+.section-fonctionnement__container-fiches div i {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.section-fonctionnement__container-fiches div:hover {
+  background-color: #dddddd;
+}
+.section-fonctionnement__fiche-number {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  width: 29px;
+  height: 29px;
+  border-radius: 100%;
+  color: white;
+  margin-left: -11.5px;
+}
+.section-fonctionnement__fiche-content {
+  width: 100%;
+}
+.section-fonctionnement__fiche-content .fa-store {
+  color: #9356DC;
+}
+
+.section-restaurants {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

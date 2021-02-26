@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    font-family: "Roboto";
+}
+
+.head-menus{
+    @include header;
+    &__arrow{
+        width: 0;
+        padding-left: 5%;
+        z-index: 1;
+        & a{
+            color: black;
+        }
+    }
+    &__container-logo{
+        width: 100%;
+        margin-left: -5%;
+        text-align: center;
+    }
+}
+
+.btn{
+    @include button;
+}
+
+footer{
+    @include footer;
+}
