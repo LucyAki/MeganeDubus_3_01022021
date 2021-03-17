@@ -133,7 +133,7 @@
 }
 
 @mixin background-menus($img) {
-    background: url("../images/restaurants/"+$img);
+    background: url("../../images/restaurants/"+$img);
     background-size: cover;
     height: 250px;
     margin-top: -8px;
