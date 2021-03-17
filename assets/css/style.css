@@ -53,11 +53,11 @@
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../sass/vendors/roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff");
+  src: url("../../sass/vendors/roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff");
 }
 @font-face {
   font-family: "shrikhand";
-  src: url("../sass/vendors/webfontkit-20210224-124557/shrikhand-regular-webfont.woff") format("woff"), url("../sass/vendors/webfontkit-20210224-124557/shrikhand-regular-webfont.woff2") format("woff2");
+  src: url("../../sass/vendors/webfontkit-20210224-124557/shrikhand-regular-webfont.woff") format("woff"), url("../../sass/vendors/webfontkit-20210224-124557/shrikhand-regular-webfont.woff2") format("woff2");
 }
 body {
   margin: 0;
@@ -362,26 +362,26 @@ footer a:hover {
 }
 
 .img-head__menu-1 {
-  background: url("../images/restaurants/1_la_palette_du_gout.jpg");
+  background: url("../../images/restaurants/1_la_palette_du_gout.jpg");
   background-size: cover;
   height: 250px;
   margin-top: -8px;
 }
 .img-head__menu-2 {
-  background: url("../images/restaurants/2_la_note_enchantée.jpg");
+  background: url("../../images/restaurants/2_la_note_enchantée.jpg");
   background-size: cover;
   height: 250px;
   margin-top: -8px;
 }
 .img-head__menu-3 {
-  background: url("../images/restaurants/3_a_la_francaise.jpg");
+  background: url("../../images/restaurants/3_a_la_francaise.jpg");
   background-size: cover;
   height: 250px;
   margin-top: -8px;
   height: 300px;
 }
 .img-head__menu-4 {
-  background: url("../images/restaurants/4_le_delice_des_sens.jpg");
+  background: url("../../images/restaurants/4_le_delice_des_sens.jpg");
   background-size: cover;
   height: 250px;
   margin-top: -8px;
