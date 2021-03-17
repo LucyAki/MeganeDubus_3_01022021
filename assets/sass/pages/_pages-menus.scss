@@ -1,0 +1,143 @@
+.img-head{
+    &__menu-1{
+        @include background-menus("1_la_palette_du_gout.jpg");
+    }
+    &__menu-2{
+        @include background-menus("2_la_note_enchantée.jpg");
+    }
+    &__menu-3{
+        @include background-menus("3_a_la_francaise.jpg");
+        height: 300px;
+    }
+    &__menu-4{
+        @include background-menus("4_le_delice_des_sens.jpg");
+    }
+}
+
+.div-icone{
+    &__menus{
+        font-size: 1.5em;
+        line-height: 2em;
+        &:hover{
+            @include anim-hearts;
+        }
+        &:active{
+            @include anim-hearts;
+        }
+    }
+}
+
+.section-menus{
+    margin-top: -71px;
+    padding-bottom: 75px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    background-color: $color-bg;
+    h1{
+        font-family: $font-title;
+        font-weight: lighter;
+    }
+    &__title{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 15px;
+    }
+    &__subsections{
+        margin-left: 3%;
+    }
+    &__subsections-titles{
+        font-family: $font-body;
+        font-weight: lighter;
+        border-bottom: solid $color-tertiaire 3px;
+        width: 49px;
+        font-size: 1.2rem;
+    }
+    &__fiches{
+        opacity: 0;
+        margin-top: 30px;
+        display: flex;
+        background-color: white;
+        border-radius: 23px;
+        margin-bottom: 18px;
+        padding-left: 5%;
+        align-items: end;
+        font-size: 0.85rem;
+        margin-right: 3%;
+        box-shadow: 2px 2px 8px -1px darken($color-bg, 40%);
+        animation: apparition 2s forwards;
+        height: 80px;
+        overflow: hidden;
+        &:hover{
+            .section-menus__fiches{
+                &__check{
+                    margin-right: 0;
+                    transition: ease-in-out 1s ;
+                    i{
+                        transform: rotate(360deg);
+                        transition: transform 0.3s 0.5s ease-out;
+                    }
+                }
+                &__first-child {
+                    div{
+                        width: 70%;
+                        transition: ease-in-out 0.5s;
+                    }
+                }
+            }
+        }
+        &__2{
+            animation-delay: 0.3s;
+        }
+        &__3{
+            animation-delay: 0.6s;
+        }
+        &__4{
+            animation-delay: 0.9s;
+        }
+        &__first-child{
+            display: flex;
+            width: 100%;
+            min-width: 70%;
+            line-height: 19px;
+            & div{
+                transition: ease-out 1s;
+                width: 100%;
+            }
+        }
+        &__text{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &__price{
+            align-self: flex-end;
+            margin-left: auto;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        &__check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-tertiaire;
+            height: 100%;
+            width: 100px;
+            margin-right: -100px;
+            margin-left: 20px;
+            transition: ease-in-out 1s;
+            i{
+                font-size: 2rem;
+                color: white;
+            }
+        }
+    }
+}
+
+.btn__commander{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}

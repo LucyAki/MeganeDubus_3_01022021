@@ -1,4 +1,7 @@
+//All
+
 @mixin header {
+    //En-tête
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,10 +14,11 @@
 }
 
 @mixin footer {
+    //Pied de pages
     background-color: $color-footer;
     padding: 2% 0 5% 5%;
     & h2{
-        font-family: "shrikhand";
+        font-family: $font-title;
         color: white;
     }
     & a{
@@ -26,12 +30,15 @@
         & .icone-hand{
             width: .8rem;
         }
+        &:hover{
+            text-decoration: underline;
+        }
     }
 }
 
 @mixin button {
+    //Pour les boutons de toutes les pages
     display: inline-block;
-    background: $color-primary;
     background: linear-gradient(352deg, $color-primary 0, $color-secondary 92%); 
     border-radius: 50% / 192%;
     padding: 0 10px 0 10px;
@@ -39,12 +46,78 @@
     color: white;
     font-size: 0.9rem;
     box-shadow: 2px 4px 6px darken($color-bg, 30%);
+    width: 161px;
+    text-align: center;
+    @include transition($duration: $medium-duration);
     &:hover{
-        box-shadow: 2px 4px 2px darken($color-bg, 50%);
+        @include transition($scale: $big-scale);
+        background: $color-secondary;
+        box-shadow: 2px 4px 7px darken($color-bg, 60%)
     }
 }
 
+@mixin transition($scale: $small-scale, $duration: $small-duration){
+    //Transitions de taille (augmentation ou réduction)
+    transform: scale($scale);
+    transition: transform $duration ease-in-out;
+}
+
+@mixin transition-opacity($opacity: 0) {
+    //Transitions pour les opacités (ex : les coeurs)
+    opacity: $opacity;
+    transition: opacity $big-duration cubic-bezier(1,.01,.63,.88);
+}
+
+@mixin anim-hearts{
+    .heart-inside{
+        @include transition-opacity($opacity: 1);
+        background: linear-gradient(360deg, $color-secondary 30%, $color-primary 100%);
+        background-clip: text;
+    }
+    .heart-outside{
+        @include transition-opacity;
+    }
+}
+
+@mixin overlay {
+    //Overlay pour l'écran de chargement
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    //Pour que la div ne bouge pas
+    width: 100%;
+    height: 100%;
+    //Pour que la div prenne toute la place
+    background: rgb(0, 0, 0, 0.7);
+    /*Pour griser le fond*/
+    margin: 0;
+    //Pour supprimer les eventuelles marges
+    z-index: 99;
+    //Pour que l'overlay passe au dessus de tout
+    animation: opacity 500ms;
+    //Nom de l'animation + temps de l'animation
+    animation-delay: 3s;
+    //Temps avant que l'animation ne se déclanche
+    animation-fill-mode: forwards;
+    //Pour que l'animation ne revienne pas à son état inital (opacity 1)
+}
+
+/*@mixin dot($left) {
+    content: '';
+    position: absolute;
+    left: $left;
+    width: $width-dot;
+    height: $height-dot;
+    opacity: 0;
+    border-radius: 50%;
+    background:white;
+}*/
+
+//Accueil
+
 @mixin new {
+    //Pour la fiche "nouveau"
     display: inline-block;
     display: flex;
     justify-content: center;
@@ -55,6 +128,13 @@
     width: 80px;
     border-radius: 7% / 16%;
     position: absolute;
-    right: 50px;
+    right: 14px;
     z-index: 1;
+}
+
+@mixin background-menus($img) {
+    background: url("../images/restaurants/"+$img);
+    background-size: cover;
+    height: 250px;
+    margin-top: -8px;
 }

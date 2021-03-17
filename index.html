@@ -8,6 +8,13 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     </head>
     <body>
+        <div class="overlay">
+            <div class="overlay__loader">
+                <div class="overlay__bounce-ball"></div>
+                <p>Ohmychargement</p>
+                <div class="overlay__dots"></div>
+            </div>
+        </div>
         <header class="head-accueil">
             <img class="head-accueil__logo" src="./assets/images/ohmyfood.png">
         </header>
@@ -45,7 +52,7 @@
         <section class="section-restaurants">
             <h2>Restaurants</h2>
             <div class="section-restaurants__container-fiches">
-                <a href="./html/menus/menu_1_palette.html">
+                <a href="./html/menus/menu_1_palette.html" class="section-restaurants__link">
                     <p class="section-restaurants__new">Nouveau</p>
                     <div class="section-restaurants__container-img">
                         <img src="./assets/images/restaurants/1_la_palette_du_gout.jpg">
@@ -55,10 +62,13 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <i class="far fa-heart"></i>
+                        <div class="fa-stack div-icone">
+                            <i class="fas fa-heart fa-stack-1x heart-inside"></i>
+                            <i class="far fa-heart fa-stack-1x heart-outside"></i>
+                        </div>
                     </div>
                 </a>
-                <a href="./html/menus/menu_2_note.html">
+                <a href="./html/menus/menu_2_note.html" class="section-restaurants__link">
                     <p class="section-restaurants__new">Nouveau</p>
                     <div class="section-restaurants__container-img">
                         <img src="./assets/images/restaurants/2_la_note_enchantée.jpg">
@@ -68,10 +78,13 @@
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
-                        <i class="far fa-heart"></i>
+                        <div class="fa-stack div-icone">
+                            <i class="fas fa-heart fa-stack-1x heart-inside"></i>
+                            <i class="far fa-heart fa-stack-1x heart-outside"></i>
+                        </div>
                     </div>
                 </a>
-                <a href="./html/menus/menu_3_francaise.html">
+                <a href="./html/menus/menu_3_francaise.html" class="section-restaurants__link">
                     <div class="section-restaurants__container-img">
                         <img src="./assets/images/restaurants/3_A_la_francaise.jpg">
                     </div>
@@ -80,10 +93,13 @@
                             <h3>À la française</h3>
                             <p>Cité rouge</p>
                         </div>
-                        <i class="far fa-heart"></i>
+                        <div class="fa-stack div-icone">
+                            <i class="fas fa-heart fa-stack-1x heart-inside"></i>
+                            <i class="far fa-heart fa-stack-1x heart-outside"></i>
+                        </div>
                     </div>
                 </a>
-                <a href="./html/menus/menu_4_delice.html">
+                <a href="./html/menus/menu_4_delice.html" class="section-restaurants__link">
                     <div class="section-restaurants__container-img">
                         <img src="./assets/images/restaurants/4_le_delice_des_sens.jpg">
                     </div>
@@ -92,7 +108,10 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <i class="far fa-heart"></i>
+                        <div class="fa-stack div-icone">
+                            <i class="fas fa-heart fa-stack-1x heart-inside"></i>
+                            <i class="far fa-heart fa-stack-1x heart-outside"></i>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -106,7 +125,6 @@
                 <a href="">
                     <p><i class="fas fa-hands-helping icone-hand"></i> Devenir partenaire</p>
                 </a>
-                <div>
                 <a href="">
                     <p>Mentions légales</p>
                 </a>

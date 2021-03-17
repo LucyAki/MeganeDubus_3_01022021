@@ -2,6 +2,44 @@
     @include header;
 }
 
+
+.overlay{
+    @include overlay;
+     &__loader{
+         display: flex;
+         font-family: $font-title;
+         justify-content: space-around;
+         align-items: baseline;
+         position: absolute;
+         //Pour que le loader ne bouge pas
+         height: 5%;
+         //Pour régler la taille du loader
+         z-index: 100;
+         //Pour que le loader passe au dessus de son bg
+         color: white;
+     }
+     &__bounce-ball{
+         position: relative;
+         width: $width-ball;
+         height: 30px;
+         border-radius: 50%;
+         margin-right: 10px;
+         &::before {
+             position: absolute;
+             content: '';
+             display: block;
+             top: 0;
+             width: $width-ball;
+             height: $height-ball;
+             border-radius: 50%;
+             background-color: $color-secondary;
+             transform-origin: 50%;
+             animation: bounce 500ms alternate infinite ease;
+           
+         }
+     }
+ }
+
 .section-intro{
     background-color: $color-bg;
     text-align: center;
@@ -25,7 +63,7 @@
     &__container-fiches div{
         display: flex;
         background-color: $color-bg;
-        border-radius: 6% / 27%;
+        border-radius: 17px;
         width: 90%;
         height: 79px;
         align-items: center;
@@ -37,6 +75,9 @@
         }
         &:hover{
             background-color: darken($color-bg, 10%);
+            i{
+                color: $color-primary;
+            }
         }
     }
     &__fiche-number{
@@ -53,9 +94,6 @@
     }
     &__fiche-content{
         width: 100%; 
-        .fa-store{
-            color: $color-primary;
-        }
     }
 }
 
@@ -66,9 +104,14 @@
     &__container-fiches, h2{
         margin-left: 8%;
     }
-    & a{
+    &__link{
+        display: inline-block;
         text-decoration: none;
         color: black;
+        @include transition($duration: $medium-duration);
+        &:hover{
+            @include transition($scale: $medium-scale);
+        }
     }
     &__new{
         @include new;
@@ -103,12 +146,8 @@
             line-height: 6px;
             margin-left: -22px;
         }
-        & i{
+        i{
             font-size: 1.5rem;
-            &:hover{
-                background: rgb(246,118,218);
-                background: linear-gradient(360deg, rgba(246,118,218,1) 0%, rgba(147,86,220,1) 100%);
-            }
         }
     }
 }
