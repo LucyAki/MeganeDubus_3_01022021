@@ -54,56 +54,11 @@
         font-size: 1.2rem;
     }
     &__fiches{
-        opacity: 0;
-        margin-top: 30px;
-        display: flex;
-        background-color: white;
-        border-radius: 23px;
-        margin-bottom: 18px;
-        padding-left: 5%;
-        align-items: end;
-        font-size: 0.85rem;
-        margin-right: 3%;
-        box-shadow: 2px 2px 8px -1px darken($color-bg, 40%);
-        animation: apparition 2s forwards;
-        height: 80px;
-        overflow: hidden;
+        @include fiches;
+        @include check;
+        @include anim-fiches;
         &:hover{
-            .section-menus__fiches{
-                &__check{
-                    margin-right: 0;
-                    transition: ease-in-out 1s ;
-                    i{
-                        transform: rotate(360deg);
-                        transition: transform 0.3s 0.5s ease-out;
-                    }
-                }
-                &__first-child {
-                    div{
-                        width: 70%;
-                        transition: ease-in-out 0.5s;
-                    }
-                }
-            }
-        }
-        &__2{
-            animation-delay: 0.3s;
-        }
-        &__3{
-            animation-delay: 0.6s;
-        }
-        &__4{
-            animation-delay: 0.9s;
-        }
-        &__first-child{
-            display: flex;
-            width: 100%;
-            min-width: 70%;
-            line-height: 19px;
-            & div{
-                transition: ease-out 1s;
-                width: 100%;
-            }
+            @include anim-check;
         }
         &__text{
             overflow: hidden;
@@ -116,21 +71,6 @@
             text-align: center;
             font-weight: bold;
             font-size: 0.9rem;
-        }
-        &__check{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: $color-tertiaire;
-            height: 100%;
-            width: 100px;
-            margin-right: -100px;
-            margin-left: 20px;
-            transition: ease-in-out 1s;
-            i{
-                font-size: 2rem;
-                color: white;
-            }
         }
     }
 }

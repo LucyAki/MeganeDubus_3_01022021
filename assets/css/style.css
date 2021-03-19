@@ -1,14 +1,4 @@
 @charset "UTF-8";
-/*@mixin dot($left) {
-    content: '';
-    position: absolute;
-    left: $left;
-    width: $width-dot;
-    height: $height-dot;
-    opacity: 0;
-    border-radius: 50%;
-    background:white;
-}*/
 @keyframes show-overflow {
   from {
     overflow: hidden;
@@ -199,7 +189,6 @@ footer a:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  /*Pour griser le fond*/
   margin: 0;
   z-index: 99;
   animation: opacity 500ms;
@@ -456,49 +445,6 @@ footer a:hover {
   height: 80px;
   overflow: hidden;
 }
-.section-menus__fiches:hover .section-menus__fiches__check {
-  margin-right: 0;
-  transition: ease-in-out 1s;
-}
-.section-menus__fiches:hover .section-menus__fiches__check i {
-  transform: rotate(360deg);
-  transition: transform 0.3s 0.5s ease-out;
-}
-.section-menus__fiches:hover .section-menus__fiches__first-child div {
-  width: 70%;
-  transition: ease-in-out 0.5s;
-}
-.section-menus__fiches__2 {
-  animation-delay: 0.3s;
-}
-.section-menus__fiches__3 {
-  animation-delay: 0.6s;
-}
-.section-menus__fiches__4 {
-  animation-delay: 0.9s;
-}
-.section-menus__fiches__first-child {
-  display: flex;
-  width: 100%;
-  min-width: 70%;
-  line-height: 19px;
-}
-.section-menus__fiches__first-child div {
-  transition: ease-out 1s;
-  width: 100%;
-}
-.section-menus__fiches__text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.section-menus__fiches__price {
-  align-self: flex-end;
-  margin-left: auto;
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
 .section-menus__fiches__check {
   display: flex;
   justify-content: center;
@@ -513,6 +459,49 @@ footer a:hover {
 .section-menus__fiches__check i {
   font-size: 2rem;
   color: white;
+}
+.section-menus__fiches__first-child {
+  display: flex;
+  width: 100%;
+  min-width: 70%;
+  line-height: 19px;
+}
+.section-menus__fiches__first-child div {
+  transition: ease-out 1s;
+  width: 100%;
+}
+.section-menus__fiches__2 {
+  animation-delay: 0.3s;
+}
+.section-menus__fiches__3 {
+  animation-delay: 0.6s;
+}
+.section-menus__fiches__4 {
+  animation-delay: 0.9s;
+}
+.section-menus__fiches:hover .section-menus__fiches__check {
+  margin-right: 0;
+  transition: ease-in-out 1s;
+}
+.section-menus__fiches:hover .section-menus__fiches__check i {
+  transform: rotate(360deg);
+  transition: transform 0.3s 0.5s ease-out;
+}
+.section-menus__fiches:hover .section-menus__fiches__first-child div {
+  width: 70%;
+  transition: ease-in-out 0.5s;
+}
+.section-menus__fiches__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section-menus__fiches__price {
+  align-self: flex-end;
+  margin-left: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .btn__commander {

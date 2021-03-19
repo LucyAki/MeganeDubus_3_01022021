@@ -56,6 +56,8 @@
     }
 }
 
+    //Transitions
+
 @mixin transition($scale: $small-scale, $duration: $small-duration){
     //Transitions de taille (augmentation ou réduction)
     transform: scale($scale);
@@ -68,6 +70,8 @@
     transition: opacity $big-duration cubic-bezier(1,.01,.63,.88);
 }
 
+    //Animation
+
 @mixin anim-hearts{
     .heart-inside{
         @include transition-opacity($opacity: 1);
@@ -78,6 +82,10 @@
         @include transition-opacity;
     }
 }
+
+//Accueil
+
+    //Loader
 
 @mixin overlay {
     //Overlay pour l'écran de chargement
@@ -90,7 +98,7 @@
     height: 100%;
     //Pour que la div prenne toute la place
     background: rgb(0, 0, 0, 0.7);
-    /*Pour griser le fond*/
+    //Pour griser le fond
     margin: 0;
     //Pour supprimer les eventuelles marges
     z-index: 99;
@@ -102,19 +110,6 @@
     animation-fill-mode: forwards;
     //Pour que l'animation ne revienne pas à son état inital (opacity 1)
 }
-
-/*@mixin dot($left) {
-    content: '';
-    position: absolute;
-    left: $left;
-    width: $width-dot;
-    height: $height-dot;
-    opacity: 0;
-    border-radius: 50%;
-    background:white;
-}*/
-
-//Accueil
 
 @mixin new {
     //Pour la fiche "nouveau"
@@ -132,9 +127,90 @@
     z-index: 1;
 }
 
+//Menus 
+
 @mixin background-menus($img) {
     background: url("../../images/restaurants/"+$img);
     background-size: cover;
     height: 250px;
     margin-top: -8px;
+}
+
+@mixin fiches {
+    opacity: 0;
+    margin-top: 30px;
+    display: flex;
+    background-color: white;
+    border-radius: 23px;
+    margin-bottom: 18px;
+    padding-left: 5%;
+    align-items: end;
+    font-size: 0.85rem;
+    margin-right: 3%;
+    box-shadow: 2px 2px 8px -1px darken($color-bg, 40%);
+    animation: apparition 2s forwards;
+    height: 80px;
+    overflow: hidden;
+
+}
+
+@mixin check {
+    &__check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-tertiaire;
+        height: 100%;
+        width: 100px;
+        margin-right: -100px;
+        margin-left: 20px;
+        transition: ease-in-out 1s;
+        i{
+            font-size: 2rem;
+            color: white;
+        }
+    }
+    &__first-child{
+        display: flex;
+        width: 100%;
+        min-width: 70%;
+        line-height: 19px;
+        & div{
+            transition: ease-out 1s;
+            width: 100%;
+        }
+    }
+}
+
+    //Animations
+
+@mixin anim-fiches {
+    &__2{
+        animation-delay: 0.3s;
+    }
+    &__3{
+        animation-delay: 0.6s;
+    }
+    &__4{
+        animation-delay: 0.9s;
+    }
+}
+
+@mixin anim-check {
+    .section-menus__fiches{
+        &__check{
+            margin-right: 0;
+            transition: ease-in-out 1s ;
+            i{
+                transform: rotate(360deg);
+                transition: transform 0.3s 0.5s ease-out;
+            }
+        }
+        &__first-child {
+            div{
+                width: 70%;
+                transition: ease-in-out 0.5s;
+            }
+        }
+    }  
 }
