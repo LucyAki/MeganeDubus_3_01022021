@@ -235,9 +235,6 @@ footer a:hover {
   transform-origin: 50%;
   animation: bounce 500ms alternate infinite ease;
 }
-.overlay__points {
-  transition: 1s linear;
-}
 
 .section-intro {
   background-color: #F6F6F6;
