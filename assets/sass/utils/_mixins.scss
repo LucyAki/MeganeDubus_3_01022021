@@ -51,7 +51,7 @@
     @include transition($duration: $medium-duration);
     &:hover{
         @include transition($scale: $big-scale);
-        background: $color-secondary;
+        filter: brightness(110%);
         box-shadow: 2px 4px 7px darken($color-bg, 60%)
     }
 }
