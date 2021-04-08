@@ -246,6 +246,10 @@ footer a:hover {
 .section-fonctionnement {
   margin-left: 8%;
 }
+.section-fonctionnement__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .section-fonctionnement__container-fiches div {
   display: flex;
   background-color: #F6F6F6;
