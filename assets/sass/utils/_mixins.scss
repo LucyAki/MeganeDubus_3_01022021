@@ -77,6 +77,8 @@
         @include transition-opacity($opacity: 1);
         background: linear-gradient(360deg, $color-secondary 30%, $color-primary 100%);
         background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
     .heart-outside{
         @include transition-opacity;
@@ -130,7 +132,7 @@
 //Menus 
 
 @mixin background-menus($img) {
-    background: url("../../images/restaurants/"+$img);
+    background: url("../images/restaurants/"+$img);
     background-size: cover;
     height: 250px;
     margin-top: -8px;
